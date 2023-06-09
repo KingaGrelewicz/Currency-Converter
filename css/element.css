@@ -1,7 +1,5 @@
 .element {
     height: 700px;
-    resize: both;
-    overflow: auto;
     background-image: url("../images/background01.jpg");
     background-color: aquamarine;
     background-position: center;

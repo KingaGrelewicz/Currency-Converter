@@ -1,6 +1,9 @@
 .element {
+    display: flex;
+    justify-content: flex-start ;
     height: 700px;
     background-image: url("../images/background01.jpg");
     background-position: center;
     background-size: cover;
+
 }

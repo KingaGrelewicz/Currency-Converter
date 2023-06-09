@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walut</title>
+    <meta property="og:image" content="images/currencyconverter.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/element.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script defer src="JS/script.js"></script>
+</head>
+
+<body class="body">
+    <div class="element">
+        <form class="form js-formElement">
+            <fieldset class="form__fieldset">
+                <legend class="legendText">Kalkulator walut</legend>
+                <p>
+                    <label for="currencyElement">
+                        <span class="form__field"> Wybierz walutę: </span>
+                        <select class="form__field js-currencyElement" name="currencyElement" id="currencyElement">
+                            <option value="EUR" selected>Euro</option>
+                            <option value="USD">Dolar amerykański</option>
+                            <option value="CHF">Frank szwajcarski</option>
+                            <option value="JPY">Jen</option>
+                            <option value="CZK">Korona czeska</option>
+                            <option value="NOK">Korona norweska</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label for="amountElement">
+                        <span class="form__field">Kwota w złotówkach*:</span>
+                        <input class="form__field js-amountElement" type="number" name="amountElement"
+                            id="amountElement" min="10" placeholder="100" step="any" required autofocus>
+                    </label>
+                </p>
+                <button class="form__button">Przelicz</button>
+                <p>
+                    <label>Twoja kwota: <strong class="js-outputAmount"></strong></label>
+                </p>
+                <p class="form__requiredText">
+                    Pola wymagane oznaczone są *
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

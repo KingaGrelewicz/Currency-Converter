@@ -7,7 +7,7 @@ Then the simple currency converter count the amount for you, and you will know h
 ## Demo
 My simple currency converter is available online. You can check it here: https://kingagrelewicz.github.io/Currency-Converter/
 
-![Currency converter screenshot](images/screenshot.png)
+![Currency converter screenshot](videos/currency-converter.gif)
 
 The exchange of a given currency is constant from the date 10.06.23. The app doesn't connect to any server with exchange rates. This is the next step to develop this app.
 

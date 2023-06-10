@@ -10,4 +10,8 @@ html {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     line-height: 1.5;
+    height: 700px;
+    background-image: url("../images/background01.jpg");
+    background-position: center;
+    background-size: cover;
 }

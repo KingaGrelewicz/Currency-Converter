@@ -5,10 +5,10 @@ let currnecyElement = document.querySelector(".js-currencyElement");
 let amountElement = document.querySelector(".js-amountElement");
 let outputAmount = document.querySelector(".js-outputAmount");
 
-let EUR = 4.53;
-let USD = 4.20;
-let CHF = 4.65;
-let JPY = 3.04;
+let EUR = 4.47;
+let USD = 4.15;
+let CHF = 4.61;
+let JPY = 2.97;
 let CZK = 0.19;
 let NOK = 0.38;
 

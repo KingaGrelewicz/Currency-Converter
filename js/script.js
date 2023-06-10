@@ -1,48 +1,64 @@
-console.log("Hello World!")
+{
+    const welcome = () => {
+        console.log("Hello World!")
+    };
 
-let formElement = document.querySelector(".js-formElement");
-let currnecyElement = document.querySelector(".js-currencyElement");
-let amountElement = document.querySelector(".js-amountElement");
-let outputAmount = document.querySelector(".js-outputAmount");
+    const calculateResult = (amount, currency) => {
+        const EUR = 4.47;
+        const USD = 4.15;
+        const CHF = 4.61;
+        const JPY = 2.97;
+        const CZK = 0.19;
+        const NOK = 0.38;
 
-let EUR = 4.47;
-let USD = 4.15;
-let CHF = 4.61;
-let JPY = 2.97;
-let CZK = 0.19;
-let NOK = 0.38;
+        switch (currency) {
+            case "EUR":
+                return amount / EUR;
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+            case "USD":
+                return amount / USD;
 
-    let currency = currencyElement.value;
-    let amount = +amountElement.value;
-    let result = outputAmount.value;
+            case "CHF":
+                return amount / CHF;
 
-    switch (currency) {
-        case "EUR":
-            result = amount / EUR;
-            break;
+            case "JPY":
+                return amount / JPY;
 
-        case "USD":
-            result = amount / USD;
-            break;
+            case "CZK":
+                return amount / CZK;
 
-        case "CHF":
-            result = amount / CHF;
-            break;
+            case "NOK":
+                return amount / NOK;
+        }
 
-        case "JPY":
-            result = amount / JPY;
-            break;
+        welcome();
+    };
 
-        case "CZK":
-            result = amount / CZK;
-            break;
+    const updateResultText = (amount, result, currency) => {
+        const outputAmount = document.querySelector(".js-outputAmount");
+        outputAmount.innerText = `${amount.toFixed(2)} PLN = ${result.toFixed(2)} ${currency}`;
+    };
 
-        case "NOK":
-            result = amount / NOK;
-            break;
-    }
-    outputAmount.innerText = `${amount.toFixed(2)} PLN = ${result.toFixed(2)} ${currency}`;
-});
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const currnecyElement = document.querySelector(".js-currencyElement");
+        const amountElement = document.querySelector(".js-amountElement");
+
+        const currency = currencyElement.value;
+        const amount = +amountElement.value;
+
+        const result = calculateResult(amount, currency);
+
+        updateResultText(amount, result, currency);
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-formElement");
+        formElement.addEventListener("submit", onFormSubmit);
+    };
+
+
+
+    init();
+}

@@ -42,7 +42,7 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const currnecyElement = document.querySelector(".js-currencyElement");
+        const currencyElement = document.querySelector(".js-currencyElement");
         const amountElement = document.querySelector(".js-amountElement");
 
         const currency = currencyElement.value;
